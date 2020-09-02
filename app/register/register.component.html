@@ -1,0 +1,50 @@
+
+<br>
+<div>
+    <form class="container" (ngSubmit)="AddUser(data)" #data=ngForm>
+      <div class="forms group">
+        <label for="item-name">Name</label>
+        <input type="text" name ="rname" #uname=ngModel  required minlength="5" ngModel  id="item-name"class="form-control" placeholder="Your Full Name">
+        <div *ngIf='uname.invalid'>
+        <div *ngIf = 'uname.errors.required'>Name is Required</div>
+        <div *ngIf = 'uname.errors.minlength'>Name should have atleast {{minlength}} characters </div>
+    </div>
+       </div>
+       <div class="forms group">
+        <label for="item-email">Email</label>
+        <input type="text" name="remail" #uemail=ngModel  required ngModel id="item-email"class="form-control" placeholder="Your Email">
+        <div *ngIf='uemail.invalid'>
+            <div *ngIf = 'uemail.errors.required'>Email is Required</div>
+            <div *ngIf = 'uemail.errors.email'>Email is Invalid</div>
+        </div>
+        
+       </div>
+       <div class="forms group">
+        <label for="item-password">Password</label>
+        <input type="password"  name="rpassword" #upassword=ngModel  required ngModel id="item-password"class="form-control"placeholder="Password">
+        <div *ngIf='upassword.invalid'>
+            <div *ngIf = 'upassword.errors.required'>Password is Required</div>
+        </div>
+       </div>
+       <div class="forms group">
+        <label for="item-phoneno">Phone No:</label>
+        <input type="number" name="rphoneno" #uphone=ngModel  required ngModel id="item-phoneno"class="form-control" placeholder="Phone Number">
+        <div *ngIf='uphone.invalid'>
+            <div *ngIf = 'uphone.errors.required'>Phone No is Required</div>
+        </div>
+       </div>
+       <div class="forms group">
+        <label for="item-gender">Gender</label>
+        <input type="text"id="item-gender"name ="rgender" #ugender=ngModel  required ngModel class="form-control" placeholder="Gender">
+        <div *ngIf='ugender.invalid'>
+            <div *ngIf = 'ugender.errors.required'>Gender is Required</div>
+        </div>
+       </div>
+       <div class="forms group">
+         <br>
+        <button class="btn btn-success"[disabled] = "data.invalid">Submit</button>
+       </div>
+       
+    </form>
+</div>
+

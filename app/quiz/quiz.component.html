@@ -1,0 +1,26 @@
+<form class="container" (ngSubmit)="addtoarray(data)" #data = ngForm >
+    <div class="form-group">
+      <label for="question1"> We can create objects of the abstract class True or False? </label>
+      <input type="text" name="ans1" ngModel class="form-control" id="question1" placeholder="Your Answer" >
+    </div>
+    
+    <div class="form-group">
+      <label for="question2">Wrapping data and its related functionality into a single entity is known as ?</label>
+      <input type="text" name="ans2" ngModel class="form-control" id="question2" placeholder="Your Answer">
+    </div>
+    <div class="form-group">
+      <label for="question3">Which concept allows you to reuse the written code?</label>
+      <input type="text" name="ans3" ngModel class="form-control" id="question3" placeholder="Your Answer">
+    </div>
+    <div class="form-group">
+      <label for="question4">C++ is Procdural Language True or False ?</label>
+      <input type="text" name="ans4" ngModel class="form-control" id="question4" placeholder="Your Answer">
+    </div>
+    <div class="form-group">
+      <label for="question5">Which members are inherited but are not accessible in any case?</label>
+      <input type="text" name="ans5" ngModel class="form-control" id="question5" placeholder="Your Answer">
+    </div>
+    <button type="submit" class="btn btn-success" >Submit</button>
+  </form>
+  <div class="getscore"></div>
+
